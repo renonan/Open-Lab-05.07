@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Open_Lab_05._07
 {
@@ -6,7 +7,9 @@ namespace Open_Lab_05._07
     {
         public int[] RemoveSmallest(int[] nums)
         {
-            throw new NotImplementedException();
+            var numbersList = nums.ToList();
+            numbersList.Remove(nums.Min());
+            return numbersList.ToArray();
         }
     }
 }
